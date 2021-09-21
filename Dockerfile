@@ -28,3 +28,8 @@ COPY entrypoint.sh /entrypoint.sh
 EXPOSE ${PORT}
 VOLUME /www/assets
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
+
+FROM b4bz/homer
+VOLUME /your/local/assets/:/www/assets
+EXPOSE 8082:8080
+
